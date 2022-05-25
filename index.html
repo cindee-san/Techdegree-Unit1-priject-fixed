@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+     <!-- function to auto refresh quote, adapted from https://www.tutorialspoint.com/javascript/javascript_page_refresh.htm#:~:text=Auto%20Refresh,after%20a%20given%20time%20interval.-->
+    <script type = "text/JavaScript">
+     
+         function AutoRefresh( t ) {
+            setTimeout("location.reload(true);", t);
+         }
+    
+   </script>
+  </head>
+<!-- onload executes an automatic reload of the page after 7 seconds once the page has been loaded, adapted from above
+onClick, in the opening button tag, will refresh the page on click, including showing another quote and new background color.
+credit : https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click-->
+  <body id = main onload = "JavaScript:AutoRefresh(7000);">
+    <header>
+      <h1>Random Motivational Quote</h1>
+      <button id="load-quote" class="load-quote" onClick="window.location.reload();" >New motivational quote</button>
+    </header>
+    
+    <div class="container">
+      <div id="quote-box" class="quote-box">
+        <p class="quote">Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.</p>
+        <p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
+      </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+  </body>
+</html>
